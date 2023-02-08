@@ -70,8 +70,13 @@ for i in word1:
         word2 = word2 + i
 print( 'x',word2,'x')
 
-word6 = word
-for i in word6:
-    if i.isalpha():
-        word6.replace(i," " )
-print( 'x',word6,'x')
+#word6 = word
+#for i in word6:
+#    if i.isalpha():
+#        word6.replace(i," " )
+#print( 'x',word6,'x') 
+
+import re
+word5 = word
+nwword = re.sub(r"[^0-9],' ', word5")
+print(nwword)
