@@ -7,22 +7,51 @@ the person's age (younger / older than 70).
 mass = round(int(input('Type patients weight in whole kilograms here: ') ))
 length = round(int(input('How tall is the patient (in centimetres): ') ))
 age = round(int(input('Type patients age in years here: ') ))
-muscular = input('Is the patient very muscular? (y/n): ')
-pregnant = input('Is the patient pregnant? (y/n):  ')
-breastfeeding = input('Is the patient breastfeeding (y/n): ')
+result = ""
+#muscular = input('Is the patient very muscular? (y/n): ')
+#pregnant = input('Is the patient pregnant? (y/n):  ')
+#breastfeeding = input('Is the patient breastfeeding (y/n): ')
 
-bmi = round(mass/((length**2)*0.0001))
+""" 
+bmi: calculates patients bmi
+"""
+def bmi(mass, length):
+    bmi = round(mass/((length**2)*0.0001))
+    return bmi
 
-#Test inputs
+""" Checks in which bmi-range patients bmi is """
+def bmi_check (age,bmi):
+    if age < 70 and bmi < 18.5:
+        result = (f'Considering age ({age}) and bmi ({bmi}): patient suffers from underweight.')
+    elif age < 70 and bmi <= 25.0:
+        result = (f'Considering age ({age}) and bmi ({bmi}): patient has healthy weigt.')
+    elif age >= 70 and bmi < 22:
+        result = (f'Considering age ({age}) and bmi ({bmi}): patient suffers from underweight.')
+    elif age >= 70 and bmi < 28:
+        result = (f'Considering age ({age}) and bmi ({bmi}): patient has healthy weigt.')
+    elif bmi <=30.0:
+        result = (f'Considering patients bmi({bmi}): patient suffers from overweight.')
+    else:
+        result = (f'Considering patients bmi({bmi}): patient suffers from obesity.')
+print(result)
+
+
+
+""" Tests inputs """
+yn = ['y','Y','n','N']
 if mass < 0:
     print("Mass can't be negative. Try again.")
 if length < 0:
     print("Length can't be negative. Try again.")
 if age < 2:
-    print("Bmi can't be calculated for patients younger than 2. Try again.")
-if muscular != 'y' and 'n':
-    print("You did not answer the question about muscularity with 'y' or 'n'. Try again.")
-if pregnant != 'y' and 'n':
-    print("You did not answer the question about pregnancy with 'y' or 'n'. Try again.")
-if breastfeeding != 'y' and 'n':
-    print("You did not answer the question about breastfeeding with 'y' or 'n'. Try again.")
+    print("Bmi can't be calculated for patients younger than 2. This app is not suitable for your patient.")
+# if muscular not in yn:
+#     print("You did not answer the question about muscularity with 'y' or 'n'. Try again.")
+# if pregnant not in yn:
+#     print("You did not answer the question about pregnancy with 'y' or 'n'. Try again.")
+# if breastfeeding not in yn:
+#     print("You did not answer the question about breastfeeding with 'y' or 'n'. Try again.")
+else:
+    bmi(mass,length)
+    return bmi
+bmi_check(age,bmi)

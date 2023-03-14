@@ -1,5 +1,3 @@
-
-
 """
 Imports data from database
 ETL on Data
@@ -10,11 +8,16 @@ Creates 4 databases: 1 bigger with outliers, 1 smaller with outliers,
 # Installing libraries
 import logging
 import sqlite3
+import math
+import pickle
+import numpy as np
 import pandas as pd
+from sklearn import linear_model
+from sklearn.metrics import mean_squared_error
+from sklearn.model_selection import train_test_split
 
 #logging info
 logging.basicConfig(level = logging.DEBUG)
-
 
 # LOG LEVELS
 # DEBUG		Detailed information, useful during bugfixing
@@ -24,11 +27,11 @@ logging.basicConfig(level = logging.DEBUG)
 # CRITICAL	Reporting that the program can not continue
 
 # Global variables
-DBPATH = "../database"
+DBPATH = ".."
 
 # Collecting the data
 # Specify the con
-con = sqlite3.connect(f'{DBPATH}/db.sqlite3')
+con = sqlite3.connect('db.sqlite3')
 
 # Convert to DataFrame (first df)
 lsd = pd.read_sql('SELECT * FROM rest_api_netlify', con=con)
@@ -60,19 +63,47 @@ Q1 = lsd.quantile(0.25)
 Q3 = lsd.quantile(0.75)
 IQR = Q3 - Q1
 
-lsd_no_outl = lsd[~((lsd < (Q1 - 1.5 * IQR)) |(lsd > (Q3 + 1.5 * IQR))).any(axis=1)]
+lsd_no_outl = lsd[~((lsd < (Q1 - 1.5 * IQR)) |\
+(lsd > (Q3 + 1.5 * IQR))).any(axis=1)]
 
 # create fourth df (outliers excluded, length and mass excluded)
 
 lsd_light_no_outl = lsd_no_outl.drop(["length","mass"], axis='columns')
 
 # Save dfs as new table
-lsd.to_sql('dblsd', con=con, index=False)
-lsd_light.to_sql('dblsd_light', con=con, index=False)
-lsd_no_outl.to_sql('dblsd_no_outl', con=con, index=False)
-lsd_light_no_outl.to_sql('dblsd_light_no_outl', con=con, index=False)
+lsd.to_sql('dblsd', con=con, index=False, if_exists='replace')
+lsd_light.to_sql('dblsd_light', con=con, index=False, if_exists='replace')
+lsd_no_outl.to_sql('dblsd_no_outl', con=con, index=False, if_exists='replace')
+lsd_light_no_outl.to_sql('dblsd_light_no_outl', con=con, index=False, if_exists='replace')
 
 logging.info("Logging to file..")
 
 # close Connection
 con.close()
+
+# Getraind model binnenhalen
+with open("model.pkl", "wb") as f:
+    pickle.dump(model, f)
+
+# Define X, y in LinearRegr model & create train_test_split
+y = lsd.lifespan.values
+X = lsd[['genetic','length','mass','exercise','smoking','alcohol','sugar','bmi']].values
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create linear regression class object
+reg = linear_model.LinearRegression()
+reg.fit(X_train, y_train)
+
+# find the 8 coefficients
+reg.coef_
+
+# find the intercept
+reg.intercept_
+
+# Testing the model
+score = reg.score(X_test,y_test)
+display(score)
+predict_test = reg.predict(X_test)
+mse = mean_squared_error(y_test, predict_test)
+rmse = math.sqrt(mse)
