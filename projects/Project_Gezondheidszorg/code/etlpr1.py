@@ -3,6 +3,7 @@ Imports data from database
 ETL on Data
 Creates 4 databases: 1 bigger with outliers, 1 smaller with outliers, 
 1 bigger without outliers, 1 smaller without outliers
+
 """
 
 # Installing libraries
@@ -34,7 +35,8 @@ DBPATH = ".."
 con = sqlite3.connect('db.sqlite3')
 
 # Convert to DataFrame (first df)
-lsd = pd.read_sql('SELECT * FROM rest_api_netlify', con=con)
+# lsd = pd.read_sql('SELECT * FROM rest_api_netlify', con=con)
+lsd = pd.read_sql_query(f"SELECT * FROM {'rest_api_netlify'}", con)
 
 # TRANSFORM
 # make sure that all values (and therefore columns) are numeric
@@ -50,7 +52,7 @@ indexnegvals = lsd[(lsd < 0).any(axis=1)].index
 lsd = lsd.drop(indexnegvals).copy() # drop the rows
 
 # drop NaN values
-lsd.dropna()
+lsd = lsd.dropna()
 
 # create bmi column
 lsd['bmi'] = round(lsd['mass']/((lsd['length']**2)*0.0001))
@@ -81,13 +83,10 @@ logging.info("Logging to file..")
 # close Connection
 con.close()
 
-# Getraind model binnenhalen
-with open("model.pkl", "wb") as f:
-    pickle.dump(model, f)
 
 # Define X, y in LinearRegr model & create train_test_split
-y = lsd.lifespan.values
-X = lsd[['genetic','length','mass','exercise','smoking','alcohol','sugar','bmi']].values
+y = lsd_no_outl.lifespan.values
+X = lsd_no_outl[['genetic','length','mass','exercise','smoking','alcohol','sugar','bmi']].values
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
@@ -96,14 +95,18 @@ reg = linear_model.LinearRegression()
 reg.fit(X_train, y_train)
 
 # find the 8 coefficients
-reg.coef_
+#reg.coef_
 
 # find the intercept
-reg.intercept_
+#reg.intercept_
 
 # Testing the model
-score = reg.score(X_test,y_test)
-display(score)
-predict_test = reg.predict(X_test)
-mse = mean_squared_error(y_test, predict_test)
-rmse = math.sqrt(mse)
+# score = reg.score(X_test,y_test)
+# display(score)
+# predict_test = reg.predict(X_test)
+# mse = mean_squared_error(y_test, predict_test)
+# rmse = math.sqrt(mse)
+
+# Getraind model wegschrijven
+with open("reg.pkl", "wb") as f:
+    pickle.dump(reg, f)
