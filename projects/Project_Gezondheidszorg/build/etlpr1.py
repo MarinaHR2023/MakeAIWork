@@ -9,12 +9,12 @@ Creates 4 databases: 1 bigger with outliers, 1 smaller with outliers,
 # Installing libraries
 import logging
 import sqlite3
-import math
+#import math
 import pickle
-import numpy as np
+#import numpy as np
 import pandas as pd
 from sklearn import linear_model
-from sklearn.metrics import mean_squared_error
+#from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 
 #logging info
@@ -93,19 +93,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 # Create linear regression class object
 reg = linear_model.LinearRegression()
 reg.fit(X_train, y_train)
-
-# find the 8 coefficients
-#reg.coef_
-
-# find the intercept
-#reg.intercept_
-
-# Testing the model
-# score = reg.score(X_test,y_test)
-# display(score)
-# predict_test = reg.predict(X_test)
-# mse = mean_squared_error(y_test, predict_test)
-# rmse = math.sqrt(mse)
 
 # Getraind model wegschrijven
 with open("reg.pkl", "wb") as f:
