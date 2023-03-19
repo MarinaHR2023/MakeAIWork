@@ -30,9 +30,10 @@ def inputDigit(message, acceptableRange):
 
         i += 1
         if i < 3:
-            print(f'Ongeldige invoer. U kunt nog {3-i} poging(en) doen voordat het programma stopt.')
+            print('Ongeldige invoer: voer alleen hele getallen in. \n',
+                  f'U heeft nog {3-i} kans(en).')
         else:
-            raise Exception('Uw invoer wordt niet geaccepteerd. Het programma stopt.')
+            raise TypeError('Uw invoer was opnieuw ongeldig. Het programma stopt.')
 # --------------------------
 
 """Prints Welcome message"""
@@ -49,8 +50,7 @@ def welcome():
 
 """ Calculates bmi """
 def calc_bmi(leng, mas):
-    divider = pow(leng/100, 2)
-    bmi22 = round(mas/divider)
+    bmi22 = round(mass/((length*length)*0.0001))
     logging.debug(f'bmi: {bmi22}')
     return bmi22
 
