@@ -18,7 +18,7 @@ from sklearn import linear_model
 from sklearn.model_selection import train_test_split
 
 #logging info
-logging.basicConfig(level = logging.DEBUG)
+logging.basicConfig(level = logging.INFO)
 
 # LOG LEVELS
 # DEBUG		Detailed information, useful during bugfixing

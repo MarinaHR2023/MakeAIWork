@@ -4,6 +4,10 @@ import pickle
 import logging
 import sys  #
 
+
+#logging info
+logging.basicConfig(level = logging.INFO)
+
 """Opens pickle file"""
 with open("reg.pkl", "rb") as f:
     reg = pickle.load(f)
@@ -33,7 +37,7 @@ def inputDigit(message, acceptableRange):
             print('Ongeldige invoer: voer alleen hele getallen in. \n',
                   f'U heeft nog {3-i} kans(en).')
         else:
-            raise TypeError('Uw invoer was opnieuw ongeldig. Het programma stopt.')
+            raise Exception('Uw invoer was opnieuw ongeldig. Het programma stopt.')
 # --------------------------
 
 """Prints Welcome message"""
@@ -51,7 +55,7 @@ def welcome():
 """ Calculates bmi """
 def calc_bmi(leng, mas):
     bmi22 = round(mass/((length*length)*0.0001))
-    logging.debug(f'bmi: {bmi22}')
+   # logging(f'bmi: {bmi22}')
     return bmi22
 
 # -------------------
@@ -136,17 +140,15 @@ sugar = int(inputDigit("Hoeveel suikerklontjes per dag (tussen 0 - 14)? ", accep
 
 
 #============= calculating bmi_result
-# if "length" in inputDict and "mass" in inputDict:
-#     result_bmi = calc_bmi(inputDict["length"], inputDict["mass"])
+
 result_bmi = calc_bmi(length, mass)
 print('')
 #============= predicting lifespan
-# if "genetic" in inputDict and "exercise" in inputDict and "smoking" in inputDict and "alcohol" in inputDict and "sugar" in inputDict:
-#     pred_lifespan = lifespan_predict(inputDict["genetic"], length, mass, exercise, smoking, alcohol, sugar, result_bmi)
+
 pred_lifespan = lifespan_predict(genetic, length, mass, exercise, smoking, alcohol, sugar, result_bmi)
+
 #============= Output: bmi-communication
-# if "realAge" in inputDict:
-# bmi_check(inputDict["realAge"], inputDict["result_bmi"])
+
 bmi_check(realAge, result_bmi)
 
 print('')
