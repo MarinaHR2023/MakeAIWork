@@ -2,14 +2,18 @@
 # imports
 import pickle
 import logging
+import sys  #
 
 """Opens pickle file"""
 with open("reg.pkl", "rb") as f:
     reg = pickle.load(f)
 
-"""Asks for input and controls this proces"""
-def input_digit(message, acceptableRange):
-    inputStr = str()
+"""hide error messages after 3 wrong inputs"""
+sys.tracebacklimit = 0
+
+"""Controll structure for input-process"""
+def inputDigit(message, acceptableRange):
+    inputStr = str()            
     withinRange = False
     numberOfTries = 3
     i = 0
@@ -26,12 +30,10 @@ def input_digit(message, acceptableRange):
 
         i += 1
         if i < 3:
-            print("Ongeldige invoer. \n",
-                  f"U kunt het nog {3-i} keer proberen voordat het programma stopt.")
+            print(f'Ongeldige invoer. U kunt nog {3-i} poging(en) doen voordat het programma stopt.')
         else:
-            print('Uw invoer wordt niet geaccepteerd. Het programma stopt.')
-
-# -------------------
+            raise Exception('Uw invoer wordt niet geaccepteerd. Het programma stopt.')
+# --------------------------
 
 """Prints Welcome message"""
 def welcome():
@@ -70,13 +72,13 @@ def bmi_check (real_age1, result_bmi1):
         print(f"Gelet op leeftijd ({real_age1}) en bmi ({result_bmi1}): \n",
               "patient heeft ondergewicht.")
     elif real_age1  < 70 and result_bmi1 <= 25.0:
-        print(f"Gelet op leeftijd  ({real_age1}) en bmi ({result_bmi1}): \n",
+        print(f"Gelet op leeftijd ({real_age1}) en bmi ({result_bmi1}): \n",
               "patient heeft een gezond gewicht.")
     elif real_age1  >= 70 and result_bmi1 < 22:
         print(f"Gelet op leeftijd ({real_age1}) en bmi ({result_bmi1}): \n",
               "patient heeft ondergewicht.")
     elif real_age1  >= 70 and result_bmi1 < 28:
-        print(f"Gelet op leeftijd  ({real_age1}) en bmi ({result_bmi1}): \n",
+        print(f"Gelet op leeftijd ({real_age1}) en bmi ({result_bmi1}): \n",
               "patient heeft een gezond gewicht.")
     elif result_bmi1 <=30.0:
         print(f"De bmi is {result_bmi1}: patient heeft overgewicht.")
@@ -103,43 +105,50 @@ def calc_premiumfactor(gen1, lifesp1):
 #=============Output: welcome
 welcome()
 print('')
+
 #=============Asking for input + converts minutes to hours (exercise)
 
 # acceptableRange realAge
 acceptableRangerealAge = range(18, 116)
-realAge = int(input_digit("Wat is de leeftijd in hele jaren (tussen 18 - 115): ", acceptableRangerealAge))
+realAge = int(inputDigit("Wat is de leeftijd in hele jaren (tussen 18 - 115): ", acceptableRangerealAge))
 # acceptableRange genetic
 acceptableRangeGen = range(64, 102)
-genetic = int(input_digit("Wat is de genetische leeftijd in hele jaren (tussen 64 - 101)? ", acceptableRangeGen))
+genetic = int(inputDigit("Wat is de genetische leeftijd in hele jaren (tussen 64 - 101)? ", acceptableRangeGen))
 # acceptableRange length
 acceptableRangeLen = range(154, 215)
-length = int(input_digit("Wat is de lichaamslengte in centimeters (tussen 154 - 214)? ", acceptableRangeLen))
+length = int(inputDigit("Wat is de lichaamslengte in centimeters (tussen 154 - 214)? ", acceptableRangeLen))
 # acceptableRange mass
 acceptableRangeMass = range(50, 165)
-mass = int(input_digit("Wat is het lichaamsgewicht in hele kilo's (tussen 50 - 164)? ", acceptableRangeMass))
+mass = int(inputDigit("Wat is het lichaamsgewicht in hele kilo's (tussen 50 - 164)? ", acceptableRangeMass))
 # acceptableRange exercise
 acceptableRangeEx = range(0, 331)
-exercise1 = int(input_digit("Hoeveel minuten beweging per dag (tussen 0 - 330)? ", acceptableRangeEx))
+exercise1 = int(inputDigit("Hoeveel minuten beweging per dag (tussen 0 - 330)? ", acceptableRangeEx))
 exercise = exercise1/60
 # acceptableRange smoking
 acceptableRangeSmok = range(0, 24)
-smoking = int(input_digit("Hoeveel sigaretten per dag (tussen 0 - 23)? ", acceptableRangeSmok))
+smoking = int(inputDigit("Hoeveel sigaretten per dag (tussen 0 - 23)? ", acceptableRangeSmok))
 # acceptableRange alcohol
-acceptableRangeAlc = range(0, 7) 
-alcohol = int(input_digit("Hoeveel glazen alcohol per dag (tussen 0 - 6)? ", acceptableRangeAlc))
+acceptableRangeAlc = range(0, 7)
+alcohol = int(inputDigit("Hoeveel glazen alcohol per dag (tussen 0 - 6)? ", acceptableRangeAlc))
 # acceptableRange sugar
-acceptableRangeSug = range(0, 15) 
-sugar = int(input_digit("Hoeveel suikerklontjes per dag (tussen 0 - 14)? ", acceptableRangeSug))
+acceptableRangeSug = range(0, 15)
+sugar = int(inputDigit("Hoeveel suikerklontjes per dag (tussen 0 - 14)? ", acceptableRangeSug))
+
 
 #============= calculating bmi_result
+# if "length" in inputDict and "mass" in inputDict:
+#     result_bmi = calc_bmi(inputDict["length"], inputDict["mass"])
 result_bmi = calc_bmi(length, mass)
 print('')
 #============= predicting lifespan
-
+# if "genetic" in inputDict and "exercise" in inputDict and "smoking" in inputDict and "alcohol" in inputDict and "sugar" in inputDict:
+#     pred_lifespan = lifespan_predict(inputDict["genetic"], length, mass, exercise, smoking, alcohol, sugar, result_bmi)
 pred_lifespan = lifespan_predict(genetic, length, mass, exercise, smoking, alcohol, sugar, result_bmi)
-
 #============= Output: bmi-communication
+# if "realAge" in inputDict:
+# bmi_check(inputDict["realAge"], inputDict["result_bmi"])
 bmi_check(realAge, result_bmi)
+
 print('')
 print("LET OP!! De bmi is minder geschikt voor: \n",
     "* heel gespierde personen, \n",
@@ -149,11 +158,9 @@ print("LET OP!! De bmi is minder geschikt voor: \n",
       "(BRON: Voedingscentrum) \n",
      "")
 print('')
-#=============Output: PremiumFactor & Discount communication
+#=============Output: PremiumFactor- & Discount-communication
 
 print("Hieronder volgen de PremieFactor en het Discountpercentage. \n",
        "Een negatief Discountpercentage leidt tot een premieverhoging.")
 calc_premiumfactor(genetic, pred_lifespan)
 print('')
-
-
