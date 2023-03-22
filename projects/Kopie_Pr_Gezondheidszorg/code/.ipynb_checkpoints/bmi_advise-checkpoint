@@ -1,0 +1,28 @@
+"""
+This algorithm uses height and weight to calculate a person's bmi. 
+Based on the result, a qualification is given depending on 
+the person's age (younger / older than 70).
+"""
+
+mass = round(int(input('Type patients weight in whole kilograms here: ') ))
+length = round(int(input('How tall is the patient (in centimetres): ') ))
+age = round(int(input('Type patients age in years here: ') ))
+muscular = input('Is the patient very muscular? (y/n): ')
+pregnant = input('Is the patient pregnant? (y/n):  ')
+breastfeeding = input('Is the patient breastfeeding (y/n): ')
+
+bmi = round(mass/((length**2)*0.0001))
+
+#Test inputs
+if mass < 0:
+    print("Mass can't be negative. Try again.")
+if length < 0:
+    print("Length can't be negative. Try again.")
+if age < 2:
+    print("Bmi can't be calculated for patients younger than 2. Try again.")
+if muscular != 'y' and 'n':
+    print("You did not answer the question about muscularity with 'y' or 'n'. Try again.")
+if pregnant != 'y' and 'n':
+    print("You did not answer the question about pregnancy with 'y' or 'n'. Try again.")
+if breastfeeding != 'y' and 'n':
+    print("You did not answer the question about breastfeeding with 'y' or 'n'. Try again.")

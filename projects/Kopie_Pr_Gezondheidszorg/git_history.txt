@@ -1,0 +1,431 @@
+6e983f1 Afronding code project 1
+882ad9a Werkende Interfacedialoog Notebook
+4425948 bijgewerkt
+f61989e pickle
+cfaf875 Werkende uptodate pipeline
+b408665 LinRegress
+6401e2b Pr_Finishd_EDA & pipeline
+5362448 Worked on Cleaning and EDA also note fr workshops
+ea50fe2 Work on first EDA and EDA on nw df ('lsd')
+c76e133 gitignore   
+b0aeaf0 gitignore
+999da78 Notebook ophalen data
+d289784 CVS met healthdata
+9e1fbfa Afronding EDA
+00fd465 Begin Bmi calculator
+a69f531 EDA on project data
+a37dbe3 Veranderingen dd 24 feb 23
+435408a Code added on 22 feb 23
+e196360 Assignments 21 feb
+63dd7fc Code Numpy and Regressie
+5d2c668 Opdrachten van vr 17 feb 23
+17541b9 Opgave nog niet klaar
+0420610 Onafgemaakte extra opdracht
+7e1365a Info over Pickl Library
+1731273 git ignore
+da1a20c Assignments Jup Notebooks
+e42fc1c Merge branch 'main' of https://github.com/MitwRdam/MakeAIWork
+14f9dda Saved just in case
+58cbb0b Update notebook dictionaries
+61982bc Updated notebook sets
+42c32ce Merge branch 'main' into develop
+4059c9e Assignments made
+bdc2f33 Merge branch 'main' of https://github.com/MitwRdam/MakeAIWork
+1ec2e4b Added code
+2763ff3 Merge pull request #39 from AlxcNL/main
+be25e14 Merge branch 'MitwRdam:main' into main
+5e62920 Code 9 feb
+51dcbc7 Merge branch 'main' of github.com:AlxcNL/MakeAIWork1
+d49b0e0 Update notebooks
+c94455b Notebooks moved to practica
+19659f8 Assignments completed
+184097c Merge branch 'MitwRdam:main' into main
+a5aa1cf Assignments completed
+eeede45 Merge pull request #38 from AlxcNL/main
+1656b46 Merge branch 'MitwRdam:main' into main
+9da728e Added numbers and booleans to practica
+0f04121 Merge branch 'MitwRdam:main' into main
+2f37be4 Merge pull request #37 from AlxcNL/main
+5b0d072 nieuwste wijziging
+10ce10f Added image
+7e2f67e Example Python script that uses a timer
+e311278 Moved strings notebook to practica
+5ba1705 Added pics
+a63ad49 Ignore checkpoints
+14f1606 Avatar picture
+9c4ded5 First day assignment
+9302375 Added favicon.ico
+b25974e Added rest_server for proj_gezondheidszorg
+2f05f96 Improved installation
+84ad9dd Merge branch 'main' of github.com:MitwRdam/MakeAIWork into main
+7a17936 Merge branch 'main' of github.com:AlxcNL/MakeAIWork into main
+4101851 Improved installation scripts
+bac0b86 Moved projects
+4c9a4d2 Moved projects
+970a3d8 Moved projects
+f319f3b Merge pull request #34 from AlxcNL/main
+3f9da58 Updated Installation
+69424a3 Updated installation instructions and scripts
+05200c4 Merge pull request #32 from AlxcNL/main
+896456e Merge branch 'develop'
+0a670a3 Merge branch 'develop' of github.com:AlxcNL/MakeAIWork into develop
+33ddf50 Updated .gitignore
+d00e26f Removed separate simulations directory
+5e66425 Minor change
+117be35 Added simulations
+f60e6a0 Added scripts for OOP lesson
+8cb33af Update PROJECT_EXPORT.md
+5961f29 Added script to convert Windows paths
+310b2d3 Project export instructies toegevoegd
+089d2b5 Deliverable Periode 1
+5c611f0 Merge branch 'lesson/feedback' into develop
+070e719 Added cleaning
+a29654a Added example notebook
+d04363a Added example scripts
+24e0ab4 Added script to generate directory simulations
+13e0bf0 Added linux installation scripts and instructions to directory install
+c993f68 Added start scripts for simpylc
+831dd36 Added planet pictures
+74580af Ignore pycache
+4f0d9e4 Added UML
+dadae86 Added start_agent.sh
+53179b3 Added shape uml and script
+9cdfc70 Added simpylc scripts
+4640530 Added example scripts
+a870914 Added notebook gradient_descent
+1475d9d Added csv satellites
+31b76c9 Added notebook numpy
+07f84b0 Ignore notebooks cursisten and solutions
+8857aa1 Added notebook with gradient descent demo
+004e239 Added picture
+62765c6 Added mermaid md
+ccef952 Added scripts
+382cfa8 Added notebooks
+58be2cb Added libraries to pip
+a0c2fb9 Ignore temp files
+577eadf Merge pull request #31 from AlxcNL/main
+c17c604 Provide notebooks with answers
+0786ab0 Removed conda installfiles
+d8a057f Added notebook
+ec34d10 Fix
+df3d564 Merge branch 'main' into support
+6487b09 Cleanup
+4c165d8 Ignore simulations
+9b9cfc1 Added simpylc installation
+566b1ca Install subset of packages using pip
+cc71565 Use full path to activate virtual environment from bash_profile
+5204d8b Merge develop branch
+cacd370 Postpone notebook fix to prevent merge conflicts
+df40b8d Fixed notebook
+d6911b7 Improved installation with both pip and miniconda
+ed2b1bc Removed excercise solutions
+1fabf08 Added notebooks
+02b368c Ignore DS_Store
+46c6c0a Removed empty script
+708b6a4 Added excercise
+a8fc14f Added notebooks
+12259ae Added script to create simulation and test environment
+a1fa3d8 Added requirements installation using conda
+de1fe2b Added simpylc installation
+25959ad Removed venv activation from bash_profile
+9ab1bed Ignore log.txt
+89b4e14 Improved installation with both pip and miniconda
+98ec456 Added libary installation
+e9bd8e5 Added simpylc
+9a9b2c3 Added notebooks sets and tuples
+0fbc26b Install subset of packages using pip
+52e59ac Test toevoegen oplossing
+1c3aedd Added main script for planets
+9742317 Moved script
+8dda0d8 Added headerpath
+37f4479 Removed obsolete document
+719bc0e Use full path to activate virtual environment from bash_profile
+8079d1b Install dependencies with both pip and miniconda
+395f228 Added class diagra
+3657e4d Added material of 6 sep
+80e419b Added vector
+02ffc28 Merge branch 'main' into support
+d009948 Added Excercise
+c60a860 Postpone notebook fix to prevent merge conflicts
+5643036 Added CSV
+dc88218 Fixed platform warning for MacOS
+413169b Merge branch 'support'
+2e22984 Refactroing
+70295eb Added simpylc howto
+68e39c8 Use merge as pull policy
+1d52742 Removed docker
+112b331 Moved test script
+9ad31e8 Run jupyter without docker
+126c5d7 Use latest miw-notebook image for jupyter
+16b3e7e Added script to create simulation and test environment
+cfe05e9 Added requirements installation using conda
+21146a8 Use latest miw-notebook image for Jupyter
+486a95e Refactoring
+2b14a27 Added simpylc installation
+ef80d2f Removed venv activation from bash_profile
+0c67efa Improved installation with both pip and miniconda
+89a61e8 Improved use of venv
+55ce32b Added activation
+655758a Refactoring
+c15aa0f Ignore simulations
+2e36774 Merge branch 'develop'
+5b5640c Install subset of packages using pip
+e3adfec Merge branch 'MitwRdam:main' into main
+82d5c6b Test toevoegen oplossing
+2f0e1b5 Added main script for planets
+e2782ba Moved script
+db45fef Added headerpath
+d393f34 Removed obsolete document
+2d65a68 Use full path to activate virtual environment from bash_profile
+9d10c10 Install dependencies with both pip and miniconda
+0f804c6 Merge develop branch
+76830f6 Merge pull request #30 from AlxcNL/main
+f2dfc8d Added Excercise
+05b6217 Ignore DS_Store
+4df0f5d Postpone notebook fix to prevent merge conflicts
+d5f5696 Added CSV
+c696277 Merge pull request #29 from AlxcNL/main
+98e4edb Fixed notebook
+0f0bb49 Fixed platform warning for MacOS
+edda477 Fix for jupyterlab without docker
+847bec0 Fixed notebook
+3208486 Use image miw-notebook:0.1 for jupyter
+6787ea2 Merge pull request #23 from AlxcNL/develop
+8577ee6 Merge pull request #22 from AlxcNL/main
+45dade6 Removed excercise solutions
+60e10ca Removed excercise solutions
+d07df38 Merge branch 'MitwRdam:main' into main
+5f640a7 Back to stable state
+af20f3c Added notebook material
+aff0351 Added notebooks
+615a7b3 Added header to notebooks
+3a546e9 Improved postfix for Apple Mx
+b390693 Merge pull request #21 from AlxcNL/main
+e360508 Use image miw-notebook
+85e3c49 Merge develop branch
+cc9c074 Ignore Jupyter directories
+16d950b Fixed
+b75279f Ignore jupyter directories
+0f33943 Back to image version 0.9
+cb2311d Added note about github cli for windows
+5f598d5 Added method to grep IP in Windows
+96ee5d9 Fix to grep ip on macos
+1389c72 Merge develop branch
+5da5140 Added installation instructions for MacOS and Ubuntu
+63057d6 Addded installation instructions for MacOS
+668512b Update README.md
+0b19a87 Minor change
+1210117 Added notebook booleans
+13149d3 Added notebook strings
+f6e28ce Improved notebook strings
+e45253f Ignore temp files
+2278c0d Removed script
+c4137ad Merge develop branch
+6814983 Update README.md
+d45fbf0 Added excercises without solutions
+c1e99d8 Minor change
+582b0f2 Added notebook booleans
+072daa5 Improved notebook strings
+25ae69a Merge branch 'MitwRdam:main' into main
+72841e3 Use image 1.0-ubuntu
+591c65b Use image 1.0-ubuntu
+7a25adb Updated Python AI Workspace Usage
+b24b756 Merge pull request #20 from AlxcNL/main
+43edf17 Fix to grep ip on macos
+e3fbf34 Removed script
+e517abf Added instructions to setup virtual python environment
+096e010 Merge develop branch
+0d5c601 Added environment variable for MacOS
+965d8ec Fixed retrievement of IP
+ae61168 Added script to test simpylc
+a0363ce Added xquartz
+e8a0724 Improved venv script
+e35b6f6 Added script to test image view
+b7e29ff Added venv.sh
+04d864a Removed unnecessary instruction
+72af917 Added installation instructions for MacOS and Ubuntu
+35f7abc Addded installation instructions for MacOS
+ee64552 Update README.md
+ce242c9 Minor changes
+6d26773 Added excercises without solutions
+54996d8 Minor change
+89d8360 Added notebook booleans
+d1386ad Ignore temp Jupyter  files
+53d257f Added notebook strings
+b67ecee Use python to run script
+e2ca6fe Improved notebook strings
+40d1a67 Added notebook numbers
+19644d4 Ignore temp files
+d3404f0 Removed unnecessary instruction
+26c1163 Added installation instructions for MacOS and Ubuntu
+3453e78 Addded installation instructions for MacOS
+8384dae Merge branch 'MitwRdam:main' into main
+f70a274 Update README.md
+841e00f Minor changes
+d1fd84f Merge pull request #18 from AlxcNL/main
+be21dd5 Merge branch 'MitwRdam:main' into main
+c348453 Added excercises without solutions
+fbdba50 Minor change
+375e62a Added notebook booleans
+68815bb Ignore temp Jupyter  files
+4079374 Added notebook strings
+110f051 Use python to run script
+e695202 Ignore checkpoints
+1a06d3d Improved notebook strings
+d9a5441 Added notebook numbers
+ca52635 Ignore temp files
+db851e5 Merge branch 'MitwRdam:main' into develop
+00bb073 Added excercises without solutions
+c66de4f Minor change
+ba7bb57 Added notebook booleans
+347fc6f Ignore temp Jupyter  files
+fc9e583 Added notebook numbers
+9274b08 Merge pull request #17 from AlxcNL/main
+ac53915 Merge branch 'MitwRdam:main' into main
+8ae3dea Added csv
+c14bc3e Improved installation inscructions
+f5f04d9 Added script to start Docker Desktop automatically when git bash starts
+3d6e3c5 Added script to start Docker Desktop automatically when git bash starts
+3a312a3 Merge pull request #16 from AlxcNL/main
+8435fbf Merge branch 'feature/solar_system'
+7b92a9a Added installation instructions for MacOS
+6c397e4 Added installation instructions
+0b855a4 Added installation instructions
+4c4eade Update README.md
+8adbd5b Merge pull request #15 from AlxcNL/main
+e3ad769 Improved use of String Formatting Operator
+3448982 Fix default case
+a085c16 Added Excersise 2
+8409d26 Refactoring notebooks
+ba96280 Merge branch 'MitwRdam:main' into main
+bd20104 Added logging
+8a02188 Use miw 0.9
+b4ca59f Made bash script compatible with MacOS
+0e1e017 Improved scripts
+5a86f9e Added instructions to notebook
+d8e120c Added notebook about strings
+3bc50dc Use ptpython for REPL
+7eec14f Merge pull request #13 from AlxcNL/main
+78a0fe5 Added exmaple script
+de7fbe4 Added directory pics
+aba72d3 Movid pictures to directory pics
+3b2620a Refactoring
+7dcba66 Use docker logs to retrieve url
+90f8dc0 Python installation only needed on Windows
+4505fa1 Removed docker-compose for python-script
+a579525 Added environment variable containername
+cd8cb47 Added parameter to run docker-compose in background
+9fcaaba Merge branch 'MitwRdam:main' into main
+37a717b Automatically open webbrowser  for Jupyter
+e66b672 Use miw image version 0.7
+2beab75 Added script to start docker-compose
+78ba6ca Merge pull request #12 from AlxcNL/patch-1
+1c04e42 Use miw image version 0.7
+58d0129 Merge pull request #11 from AlxcNL/main
+57ccb41 Use ptpython for REPL
+9c062e6 Use ptpython
+6bb252c Fixed typo
+96084f9 Use compose version 3
+07f8a87 Stop all running containers so they can be removed
+42676eb Merge pull request #10 from AlxcNL/main
+a0e2040 Update README.md
+fc44330 Merge branch 'MitwRdam:main' into main
+54422c2 Added link to Git for Mac
+3251b03 Update README.md
+cf7abdc Update README.md
+6308fda Merge branch 'main' of https://github.com/MitwRdam/MakeAIWork
+e4db274 Merge branch 'scripts'
+b3e0c00 Added python example script
+5673442 Added image
+418136d Added script to start docker-compose
+c955180 Adde installation scripts for WSL Ubuntu
+7d8f672 Merge pull request #9 from AlxcNL/main
+e4a3874 Merge branch 'MitwRdam:main' into main
+add4d8a Moved bpython installation to directory ubuntu
+9dff8de Fixed problem with existing docker networks
+4ec41b8 Detect Git Bash and makeWindowsProof
+3e3aaed Bugfix
+87610fd Added installation instructions
+8cc6e3c Merge pull request #8 from AlxcNL/main
+46a07c6 Update README.md
+262b759 Update README.md
+f6c7a54 Update README.md
+e297a97 Update README.md
+eeb135f Removed winpty for LInux and MacOs
+2dc95a7 Added rebase as pull policy
+9b7925a Added instruction to add execute permission
+b87d75c Alternative runnables to docker
+efd7795 Run docker with winpty to enable tty
+5208444 Added docker run example
+77ee013 Added links to online docker tutorials
+1178158 Fix bug in md structure
+dd1fa62 Added link to wsl website
+0e37263 Merge branch 'main' of github.com:AlxcNL/MakeAIWork
+1708585 Jupyter can now also run in a WSL Linux environment
+8ed0681 Merge branch 'MitwRdam:main' into main
+245d54c Added Ubuntu wsl instructions
+46df08a Improved installation instructions
+1c4b2c9 Update README.md
+b86998b Merge pull request #7 from AlxcNL/main
+0959c03 Removed redundant script
+88b5711 Added link to Live Share
+7f1326f Merge branch 'compose'
+f13e994 Added git config instruction and script
+3b86c67 Merge branch 'MitwRdam:main' into main
+26d3856 Added script to configure git
+51df395 Merge pull request #6 from AlxcNL/patch-1
+963a2ba Update README.md
+7ed44c6 Merge pull request #5 from AlxcNL/main
+65f60a2 Imagefilenames are case sensitive
+195f6a6 Added installation instructions
+5561729 Script miw_container now uses docker-compose
+c069277 Added header to notebooks
+0d9ee8c Use docker-compose to run script script in container
+3dad2c7 Run python script in container with docker-compose
+bea49b1 Improved structure
+76f8607 Added example scripts
+0c430af Added python shebang
+4dc5933 Added example scripts
+ba22c81 Ignore notbooks
+07fbd36 Make script to run the container entrypoint
+3bcbcda Start with installation instructions
+f95a4fb Added function to convert to Windows paths
+3c30de6 Added installation instructions
+e5ee701 Improved structure
+4496e59 Moved scripts to root directory
+34909dd Renamed project to projects
+62f5a7d Merge branch 'MitwRdam:main' into main
+24e7a61 Use relative entrypoint to bash
+5796cc1 Merge pull request #3 from AlxcNL/main
+29241f1 Added Installation instructions
+ce662eb Moved docker scripts to separate directory
+8f28d96 Moved scripts to separate directory
+e8fa258 Improved script to start container
+23c0036 Use newer Docker image and mount in Windows using Cygpath
+b2b94e5 Added directory notebooks
+03363ee Improved script to run container
+2a28830 Minor change
+eea7a0a Merge branch 'MitwRdam:main' into main
+e271259 Added key generation script
+7508a21 Added installation instructions
+cd3879d Do not remove volumes
+c6f6147 Modified instuctions to reflect the new directory structure
+1b7d19f Renamed examples to lists
+fb4a820 Removed custom username
+35e809f Scripts easier to use
+7568c7e Simplified container runtime exectution
+b61d749 New directory structure
+0bb9440 Replaced single quotes by escaped double quotes
+80a9bcb Improved start scripts
+4a6b9b5 Removed docker-compose configuration
+fff3a85 Added example scripts
+7513524 Ignore ipynb_checkpoints
+3f1292a Added README
+0cafcd3 Merge pull request #1 from AlxcNL/main
+64761ac Added scripts containerised python environments
+8240f07 Beschrijving nn_diy practicum aangepast, softmax ipv sigmoid bij opdracht 1, expliciet gezegd dat opdr. 3 facultatief is en de wiskunde mag worden opgezocht
+d1c856d planning pfd layout fixed
+39c38da planning added
+ff7a3ed Uploads after on-line kick-off
+71d1eae adaptations made to upload mcr server
+78caf95 First commit
